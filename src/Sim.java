@@ -14,6 +14,7 @@ public class Sim {
         this.telefonate = telefonate;
         NomeProprietario = nomeProprietario;
         CognomeProprietario = cognomeProprietario;
+
     }
 
     private boolean addTelefonate(Chiamata Cin){
