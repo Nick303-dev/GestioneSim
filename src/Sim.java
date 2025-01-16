@@ -52,12 +52,6 @@ public class Sim {
         }
         return t;
     }
-}
-
-    }
-
-
-
 
     public String dettaglio() {
         String info;
@@ -65,12 +59,12 @@ public class Sim {
         info = "Dettagli della SIM \nNumero: ";
         info += numtelefono;
         info += " Proprietario: ";
-        info += cognomeProprietario + " " + nomeProprietario;
+        info += CognomeProprietario+ " " + NomeProprietario;
         info += " Credito: ";
         info += credito + "€";
         info += "\nElenco telefonate: \n";
         i=0;
-        while(listaTelefonate[i]!=null){
+        while(telefonate[i]!=null){
             info += telefonate[i].getNumero()+" durata -> ";
             info += telefonate[i].getDurata()+"\n";
             i++;
