@@ -26,7 +26,34 @@ public class Sim {
     }
 
     public LocalTime DurataChiamate(){
-        
+        LocalTime t = LocalTime.of(0, 0);
+        int i;
+        i=0;
+        while(telefonate[i]!=null && i<100){
+            t = t.plusSeconds(telefonate[i].getDurata().getSecond());
+            t = t.plusMinutes(telefonate[i].getDurata().getMinute());
+            t = t.plusHours(telefonate[i].getDurata().getHour());
+            i++;
+        }
+        return t;
+    }
+
+    public LocalTime DurataChiamateCon(String numero){
+        LocalTime t = LocalTime.of(0, 0);
+        int i;
+        i=0;
+        while(telefonate[i]!=null && i<100){
+            if(telefonate[i].getNumero()==numero){
+                t = t.plusSeconds(telefonate[i].getDurata().getSecond());
+                t = t.plusMinutes(telefonate[i].getDurata().getMinute());
+                t = t.plusHours(telefonate[i].getDurata().getHour());
+            }
+            i++;
+        }
+        return t;
+    }
+}
+
     }
 
 
