@@ -14,6 +14,7 @@ public class Sim {
         this.telefonate = telefonate;
         NomeProprietario = nomeProprietario;
         CognomeProprietario = cognomeProprietario;
+        this.telefonate = new Chiamata[20];
 
     }
 
@@ -44,7 +45,7 @@ public class Sim {
         LocalTime t = LocalTime.of(0, 0);
         int i;
         i=0;
-        while(telefonate[i]!=null && i<100){
+        while(i<100 && telefonate[i]!=null ){
             if(telefonate[i].getNumero()==numero){
                 t = t.plusSeconds(telefonate[i].getDurata().getSecond());
                 t = t.plusMinutes(telefonate[i].getDurata().getMinute());
