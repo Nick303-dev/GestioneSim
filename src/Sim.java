@@ -8,11 +8,12 @@ public class Sim {
     private String NomeProprietario;
     private String CognomeProprietario;
 
-    public Sim(String Nome,String Cognome,String numero,float credito) {
-        CognomeProprietario = Cognome;
-        NomeProprietario = Nome;
-        numtelefono = numero;
-        credito=credito;
+    public Sim(String numtelefono, float credito, Chiamata[] telefonate, String nomeProprietario, String cognomeProprietario) {
+        this.numtelefono = numtelefono;
+        this.credito = credito;
+        this.telefonate = telefonate;
+        NomeProprietario = nomeProprietario;
+        CognomeProprietario = cognomeProprietario;
     }
 
     private boolean addTelefonate(Chiamata Cin){
